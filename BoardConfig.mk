@@ -15,5 +15,8 @@ TARGET_PREBUILT_KERNEL := device/xiaomi/kernel-mithorium/mi8937/Image.gz-dtb
 # Partitions
 BOARD_USES_METADATA_PARTITION := true
 
+# Ramdisk
+BOARD_RECOVERYIMAGE_MAX_RAMDISK_SIZE := 20971520
+
 # Recovery
 TARGET_RECOVERY_DEVICE_DIRS += $(DEVICE_PATH)
