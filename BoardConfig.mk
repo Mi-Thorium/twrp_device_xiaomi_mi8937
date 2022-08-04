@@ -8,3 +8,6 @@
 include device/xiaomi/mithorium-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/xiaomi/uter
+
+# Kernel
+TARGET_PREBUILT_KERNEL := device/xiaomi/kernel-mithorium/uter/Image.gz-dtb
