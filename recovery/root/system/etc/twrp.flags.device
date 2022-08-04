@@ -1,7 +1,7 @@
 # mount point   fstype  device                      device2                     flags
 
 # Data
-/data           ext4    /dev/block/bootdevice/by-name/userdata                  flags=fsflags="discard"
+/data           ext4    /dev/block/bootdevice/by-name/userdata                  flags=encryptable=footer;fsflags="discard"
 
 # System
 /system_root    ext4    /dev/block/bootdevice/by-name/system                    flags=display="System";fsflags="discard";wipeingui
