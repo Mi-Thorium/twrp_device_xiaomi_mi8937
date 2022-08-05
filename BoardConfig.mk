@@ -12,5 +12,8 @@ DEVICE_PATH := device/xiaomi/uter
 # Kernel
 TARGET_PREBUILT_KERNEL := device/xiaomi/kernel-mithorium/uter/Image.gz-dtb
 
+# Partitions
+BOARD_USES_METADATA_PARTITION := true
+
 # Recovery
 TARGET_RECOVERY_DEVICE_DIRS += $(DEVICE_PATH)

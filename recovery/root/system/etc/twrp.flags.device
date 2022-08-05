@@ -2,6 +2,7 @@
 
 # Data
 /data           ext4    /dev/block/bootdevice/by-name/userdata                  flags=encryptable=footer;fsflags="discard"
+/metadata       ext4    /dev/block/bootdevice/by-name/oem                       flags=display="Metadata";fsflags="discard"
 
 # System
 /system_root    ext4    /dev/block/bootdevice/by-name/system                    flags=display="System";fsflags="discard";wipeingui
