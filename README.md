@@ -1,1 +1,1 @@
-# Device Tree for Xiaomi UTER (uter)
+# Device Tree for Xiaomi MSM8937 Devices (mi8937)

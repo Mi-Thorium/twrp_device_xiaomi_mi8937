@@ -7,10 +7,10 @@
 # Inherit from common mithorium-common
 include device/xiaomi/mithorium-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/xiaomi/uter
+DEVICE_PATH := device/xiaomi/mi8937
 
 # Kernel
-TARGET_PREBUILT_KERNEL := device/xiaomi/kernel-mithorium/uter/Image.gz-dtb
+TARGET_PREBUILT_KERNEL := device/xiaomi/kernel-mithorium/mi8937/Image.gz-dtb
 
 # Partitions
 BOARD_USES_METADATA_PARTITION := true
