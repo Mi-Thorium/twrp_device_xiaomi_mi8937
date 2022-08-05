@@ -1,3 +1,7 @@
+# Determine device
+on init
+    exec u:r:recovery:s0 -- /system/bin/determine-device.sh
+
 # DT2W
 on init
     write /proc/sys/dev/dt2w 1
