@@ -9,3 +9,10 @@ on init
 # Fstab
 on init
     exec u:r:recovery:s0 -- /system/bin/merge-fstab.sh
+
+# HVDCP
+service hvdcp_opti /system/bin/hvdcp_opti
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
