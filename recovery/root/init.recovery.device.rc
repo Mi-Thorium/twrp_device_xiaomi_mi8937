@@ -4,7 +4,7 @@ on init
 
 # DT2W
 on init
-    write /proc/sys/dev/dt2w 1
+    write /proc/sys/dev/xiaomi_msm8937_touchscreen/enable_dt2w 1
 
 # Fstab
 on init
