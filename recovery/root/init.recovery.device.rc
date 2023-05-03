@@ -1,3 +1,11 @@
+# ADSP
+on boot
+    mkdir /firmware
+    mount vfat /dev/block/bootdevice/by-name/modem /firmware ro
+    write /sys/kernel/boot_adsp/boot 1
+    exec u:r:recovery:s0 -- /system/bin/sleep 3s
+    setprop adsp.boot 1
+
 # Determine device
 on init
     exec u:r:recovery:s0 -- /system/bin/determine-device.sh
