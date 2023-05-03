@@ -6,6 +6,17 @@ on boot
     exec u:r:recovery:s0 -- /system/bin/sleep 3s
     setprop adsp.boot 1
 
+# Audio
+on property:adsp.boot=1 && property:audio.enable=*
+    exec u:r:recovery:s0 -- /system/bin/audio-enable.sh ${audio.enable}
+
+on property:adsp.boot=1 && property:audio.volume=*
+    exec u:r:recovery:s0 -- /system/bin/tinymix "RX1 Digital Volume" ${audio.volume}
+    exec u:r:recovery:s0 -- /system/bin/tinymix "RX2 Digital Volume" ${audio.volume}
+
+on boot
+    setprop audio.volume 64
+
 # Determine device
 on init
     exec u:r:recovery:s0 -- /system/bin/determine-device.sh
