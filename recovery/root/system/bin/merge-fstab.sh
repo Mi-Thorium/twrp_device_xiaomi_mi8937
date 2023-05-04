@@ -5,9 +5,11 @@ cat /system/etc/recovery.fstab.device >> /system/etc/recovery.fstab
 echo >> /system/etc/twrp.flags
 cat /system/etc/twrp.flags.device >> /system/etc/twrp.flags
 
+BOOTDEVICE="$(getprop 'ro.boot.bootdevice')"
+
 # Decryption
 mkdir /data || true
-if mount -o ro /dev/block/bootdevice/by-name/userdata /data; then
+if mount -o ro /dev/block/platform/soc/${BOOTDEVICE}/by-name/userdata /data; then
     # Mounts successfully
     if [ -d '/data/media/0/Android' ]; then
         # Unencrypted
