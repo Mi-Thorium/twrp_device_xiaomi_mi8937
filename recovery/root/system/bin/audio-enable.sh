@@ -26,7 +26,7 @@ case "$(getprop ro.product.device)" in
 		tinymix "MI2S_RX Channels" "One"
 		tinymix "RX2 MIX1 INP1" $([ "$ENABLE" == 1 ] && echo -n "RX2" || echo -n "ZERO")
 		tinymix "RDAC2 MUX" $([ "$ENABLE" == 1 ] && echo -n "RX2" || echo -n "ZERO")
-		tinymix "HPHL" $([ "$ENABLE" == 1 ] && echo -n "Switch" || echo -n "ZERO")
+#		tinymix "HPHL" $([ "$ENABLE" == 1 ] && echo -n "Switch" || echo -n "ZERO")
 		tinymix "HPHR" $([ "$ENABLE" == 1 ] && echo -n "Switch" || echo -n "ZERO")
 		tinymix "SPK PA GPIO Switch" $([ "$ENABLE" == 1 ] && echo -n "1" || echo -n "0")
 		;;
