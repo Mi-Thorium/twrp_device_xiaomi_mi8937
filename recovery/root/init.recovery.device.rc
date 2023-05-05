@@ -1,9 +1,10 @@
 # ADSP
-on boot
+on post-fs
     mkdir /firmware
     mount vfat /dev/block/bootdevice/by-name/modem /firmware ro
     write /sys/kernel/boot_adsp/boot 1
-    exec u:r:recovery:s0 -- /system/bin/sleep 3s
+
+on boot
     setprop adsp.boot 1
 
 # Audio
