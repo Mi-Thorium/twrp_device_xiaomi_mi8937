@@ -8,9 +8,14 @@
 include device/xiaomi/mithorium-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/xiaomi/mi8937
+USES_DEVICE_XIAOMI_MI8937 := true
 
 # Kernel
+ifeq ($(TARGET_KERNEL_VERSION),4.19)
+TARGET_PREBUILT_KERNEL := device/xiaomi/kernel-mithorium/mi8937_4_19/Image.gz-dtb
+else
 TARGET_PREBUILT_KERNEL := device/xiaomi/kernel-mithorium/mi8937/Image.gz-dtb
+endif
 
 # Partitions
 BOARD_USES_METADATA_PARTITION := true
