@@ -6,7 +6,9 @@
 
 # Crypto
 MITHORIUM_INCLUDE_CRYPTO_FBE := true
+ifneq ($(TARGET_KERNEL_VERSION),4.19)
 MITHORIUM_INCLUDE_CRYPTO_FDE := true
+endif
 MITHORIUM_LEGACY_CRYPTO := true
 
 # Inherit from mithorium-common

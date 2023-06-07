@@ -1,0 +1,5 @@
+# mount point   fstype  device                      device2                     flags
+
+# Data
+/data           ext4    /dev/block/bootdevice/by-name/userdata                  flags=fileencryption=aes-256-xts:aes-256-cts;metadata_encryption=aes-256-xts;fsflags="discard"
+/metadata       ext4    /dev/block/bootdevice/by-name/oem                       flags=display="Metadata";fsflags="discard"
