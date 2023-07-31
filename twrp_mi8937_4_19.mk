@@ -12,6 +12,9 @@ TARGET_KERNEL_VERSION := 4.19
 # Inherit from mi8937 device
 $(call inherit-product, device/xiaomi/mi8937/device.mk)
 
+# Properties
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += $(strip $(shell cat $(LOCAL_PATH)/mi8937_4_19/vendor.prop))
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := $(PRODUCT_RELEASE_NAME)
 PRODUCT_NAME := twrp_$(PRODUCT_RELEASE_NAME)
