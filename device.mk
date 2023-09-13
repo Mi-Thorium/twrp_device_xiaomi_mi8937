@@ -18,6 +18,11 @@ $(call inherit-product, device/xiaomi/mithorium-common/mithorium.mk)
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
 
+# Emulated storage
+ifeq ($(TARGET_KERNEL_VERSION),4.19)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+endif
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
